@@ -1,66 +1,79 @@
 # Проектная работа Sprint_4
-
-Для покрытия тестами приложения BooksCollector были использованы методы:
-
-1. add_new_book_ — добавляет новую книгу в словарь без указания жанра. Название книги может содержать максимум 40 символов. Одну и ту же книгу можно добавить только один раз.
-2. set_book_genre  — устанавливает жанр книги, если книга есть в books_genre и её жанр входит в список genre.
-3. get_book_genre_ — выводит жанр книги по её имени.
-4. get_books_with_specific_genre_ — выводит список книг с определённым жанром.
-5. get_books_genre_ — выводит текущий словарь books_genre.
-6. get_books_for_children_ — возвращает книги, которые подходят детям. У жанра книги не должно быть возрастного рейтинга.
-7. add_book_in_favorites_ — добавляет книгу в избранное. Книга должна находиться в словаре books_genre. Повторно добавить книгу в избранное нельзя.
-8. delete_book_from_favorites_ — удаляет книгу из избранного, если она там есть.
-9. get_list_of_favorites_books_ — получает список избранных книг.
+ __Для покрытия тестами приложения BooksCollector были использованы методы:__
 
 
-1. Добавляем две книги
+<details> <summary> add_new_book - добавляет новую книгу в словарь без указания жанра. Название книги может содержать максимум 40 символов. Одну и ту же книгу можно добавить только один раз. </summary>
 
-    def test_add_new_book_add_two_books(self):
 
-2. Название книги может содержать максимум 40 символов или без названия
+    1. Добавляем две книги
+        def test_add_new_book_add_two_books(self)
+        
+    2. Название книги может содержать максимум 40 символов или без названия
+        def test_add_new_book_can_more_40symbols
+        
+    3. Одну и ту же книгу можно добавить только один раз
+        def test_add_new_book_cant_add_two_books
+</details>
 
-    def test_add_new_book_can_more_40symbols
+<details> <summary> set_book_genre — устанавливает жанр книги, если книга есть в books_genre и её жанр входит в список genre. </summary>
 
-3. Одну и ту же книгу можно добавить только один раз
+    4. Устанавливает жанр книги
+        def test_set_book_genre_set_genre
+    
+    5. Жанр у книги не устанавливается, если ее нет в book_genre
+        def test_set_book_genre_cant_get_genre
+</details>
 
-    def test_add_new_book_cant_add_two_books
+<details> <summary> get_book_genre — выводит жанр книги по её имени. </summary>
 
-4. Устанавливает жанр книги
+    6. Выводит жанр книги по её имени
+      
+        def test_get_book_genre_get_book_name
+</details>
 
-    def test_set_book_genre_set_genre
+<details> <summary> get_books_with_specific_genre — выводит список книг с определённым жанром. </summary>
 
-5. Жанр у книги не устанавливается, если ее нет в book_genre
+    7. Выводит список книг с определённым жанром
 
-    def test_set_book_genre_cant_get_genre
+       def test_get_books_with_specific_genre
+</details>
 
-6. Выводит жанр книги по её имени
+<details> <summary> get_books_genre — выводит текущий словарь books_genre. </summary>
 
-    def test_get_book_genre_get_book_name
+    8. Выводит текущий словарь
 
-7. Выводит список книг с определённым жанром
+       def test_get_books_genre_books_genre
+</details>
 
-    def test_get_books_with_specific_genre
+<details> <summary> get_books_for_children — возвращает книги, которые подходят детям. У жанра книги не должно быть возрастного рейтинга. </summary>
 
-8. Выводит текущий словарь
+    9. Возвращает книги, которые подходят детям
 
-    def test_get_books_genre_books_genre
+        def test_get_books_for_children
+</details>
 
-9. Возвращает книги, которые подходят детям
+<details> <summary> add_book_in_favorites — добавляет книгу в избранное. Книга должна находиться в словаре books_genre. Повторно добавить книгу в избранное нельзя. </summary>
 
-    def test_get_books_for_children
+    10. Добавляет книгу в избранное
 
-10. Добавляет книгу в избранное
+        def test_add_book_in_favorites
 
-    def test_add_book_in_favorites
+    11. Повторно добавить книгу в избранное нельзя
 
-11. Повторно добавить книгу в избранное нельзя
+        def test_add_book_in_favorites_cant_same_book_in_favorites
+</details>
 
-    def test_add_book_in_favorites_cant_same_book_in_favorites
 
-12. Удаляет книгу из избранного, если она там есть
+<details> <summary> delete_book_from_favorites  — удаляет книгу из избранного, если она там есть. </summary>
 
-    def test_delete_book_from_favorites
+    12. Удаляет книгу из избранного, если она там есть
 
-13. Получает список избранных книг
+        def test_delete_book_from_favorites
+</details>
 
-    def test_get_list_of_favorites_books
+<details> <summary> get_list_of_favorites_books — получает список избранных книг. </summary>
+
+    13. Получает список избранных книг
+
+        def test_get_list_of_favorites_books
+</details>
